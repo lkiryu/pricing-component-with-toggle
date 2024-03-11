@@ -94,8 +94,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(163, 168, 240);
-    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    background-color: hsl(237, 63%, 64%);
     padding: 10px;
     border-radius: 10px;
     color: hsl(0, 0%, 100%);
@@ -103,6 +102,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
+    border: 1px solid hsl(236, 72%, 79%);
+    transition: 0.3s ease-in-out;
+}
+
+.card li:last-child a:hover {
+    background: hsla(236, 72%, 79%, 0%);
+    color: hsl(237, 63%, 64%);
 }
 
 .card.middle {
@@ -113,7 +119,10 @@ body {
     padding: 60px 40px;
 }
 
-.card.middle .type,
+.card.middle .type{
+    color: hsl(0, 0%, 100%);
+}
+
 .card.middle .price,
 .card.middle .storage,
 .card.middle .users-allowed,
@@ -125,6 +134,12 @@ body {
 .card.middle li:last-child a {
     background: hsl(0, 0%, 100%);
     color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(0, 0%, 100%);
+}
+
+.card.middle li:last-child a:hover {
+    background: hsla(0, 0%, 100%, 0%);
+    color: hsl(0, 0%, 100%);
 }
 
 .switch {
@@ -132,6 +147,11 @@ body {
     display: inline-block;
     width: 60px;
     height: 34px;
+    transition: 0.3s ease-in-out;
+}
+
+.switch:hover{
+    opacity: 60%;
 }
 
 .switch input {
