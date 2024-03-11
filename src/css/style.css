@@ -167,7 +167,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background: rgb(163, 168, 240);
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);;
     -webkit-transition: .4s;
     transition: .4s;
 }
