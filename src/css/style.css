@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 0%;
+}
+
+.title {
+    color: hsl(233, 13%, 49%);
+    margin-bottom: 60px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    color: hsl(234, 14%, 74%);
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+.cards .card:last-child {
+    border-radius: 0 20px 20px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    width: 350px;
+    height: 460px;
+    padding: 40px;
+}
+
+.card .type {
+    font-size: 20px;
+    color: hsl(233, 13%, 49%);
+}
+
+.card .price,
+.card .storage,
+.card .users-allowed,
+.card .send-up {
+    color: hsl(233, 13%, 49%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.card .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    color: hsl(232, 13%, 33%)
+}
+
+.card .price span {
+    font-size: 30px;
+}
+
+.card li:last-child {
+    width: 100%;
+}
+
+.card li:last-child a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(163, 168, 240);
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    padding: 10px;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.card.middle {
+    height: 500px;
+    border-radius: 20px;
+    background: rgb(163, 168, 240);
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    padding: 60px 40px;
+}
+
+.card.middle .type,
+.card.middle .price,
+.card.middle .storage,
+.card.middle .users-allowed,
+.card.middle .send-up {
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px solid hsl(236, 72%, 79%);
+}
+
+.card.middle li:last-child a {
+    background: hsl(0, 0%, 100%);
+    color: hsl(237, 63%, 64%);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background: rgb(163, 168, 240);
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
